@@ -1,0 +1,14 @@
+.completed-task {
+  background-color: #d4edda;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
