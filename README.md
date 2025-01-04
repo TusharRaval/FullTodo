@@ -1,72 +1,64 @@
-## live link-: https://beamish-moxie-6d3cbe.netlify.app/
-## full stack todo app using firebase 
-# Getting Started with Create React App
+# To-DO API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A basic Express.js API for managing a to-do list, allowing users to create, retrieve, update, and delete tasks. This project demonstrates simple RESTful API operations with in-memory data storage.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-> Create Task: Add a new task to the to-do list.
+-> Get All Tasks: Retrieve all tasks in the to-do list.
+-> Get Task by ID: Retrieve a specific task by its ID.
+-> Update Task: Modify an existing task by its ID.
+-> Delete Task: Remove a task from the list by its ID.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-> Node.js and npm installed on your local machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Clone the repository
+  git clone https://github.com/your-username/to-do-api.git
+cd to-do-api
 
-### `npm test`
+## Install dependencies
+  npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run the server
+  node index.js
 
-### `npm run build`
+The server will start on http://localhost:3000.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# API Endpoints
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ##Fetch All Tasks
+    Endpoint: /tasks
+    Method: GET
+    Description: Retrieve all tasks.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ##Fetch a Task by ID
+    Endpoint: /tasks/:id
+    Method: GET
+    Description: Retrieve a task by its unique ID.
 
-### `npm run eject`
+  ##Create a New Task
+    Endpoint: /tasks
+    Method: POST
+    Description: Adds a new task to the list.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  ##Update a Task by ID
+    Endpoint: /tasks/:id
+    Method: PUT
+    Description: Updates the task details.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ##Delete a Task by ID
+    Endpoint: /tasks/:id
+    Method: DELETE
+    Description: Deletes the specified task.
+    Response: 204 No Content (if successful)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  # Error Responses
+    404 Not Found: Returned if the specified task ID is not found.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+#Running Tests
+For simplicity, this project currently doesn't include automated tests, but you can manually test it using a tool like Postman
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    
